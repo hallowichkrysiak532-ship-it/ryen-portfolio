@@ -1,0 +1,82 @@
+---
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Projects | Ryen Wu</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <a href="/">← Back Home</a>
+
+      <h1>Projects</h1>
+
+      <section class="project">
+        <h2>Physics-informed Neural Network for Leaf Trait Inversion</h2>
+        <p>
+          This project investigates how physical radiative transfer models such as
+          PROSPECT-PRO can be combined with neural encoders for robust leaf trait
+          inversion.
+        </p>
+
+        <ul>
+          <li>Keywords: PROSPECT-PRO, PI-NN, VAE, Attention, Leaf Spectra</li>
+          <li>Traits: Cab, Car, Cw, Prot, CBC</li>
+          <li>Data: Reflectance / Transmittance spectra</li>
+        </ul>
+      </section>
+
+      <section class="project">
+        <h2>YOLOv8 OBB / Segmentation on RK3588</h2>
+        <p>
+          This project builds an embedded real-time vision pipeline using YOLOv8,
+          RKNN, ROS, and camera streaming on RK3588.
+        </p>
+
+        <ul>
+          <li>Keywords: YOLOv8, RKNN, ROS, RK3588, Segmentation</li>
+          <li>Tasks: Detection, mask extraction, angle estimation, offset publishing</li>
+          <li>Platform: Linux, ROS Noetic, Rockchip NPU</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+
+  a {
+    color: #38bdf8;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .project {
+    background: #1e293b;
+    padding: 28px;
+    border-radius: 20px;
+    margin: 28px 0;
+  }
+
+  p,
+  li {
+    color: #cbd5e1;
+    line-height: 1.7;
+  }
+</style>
