@@ -1,0 +1,32 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  contribution?: string;
+  techStack: string[];
+}
+
+const { title, description, contribution, techStack } = Astro.props;
+---
+
+<div class="card">
+  <h3>{title}</h3>
+  <p>{description}</p>
+
+  {contribution && (
+    <div class="contribution">
+      <h4>My Contribution</h4>
+      <ul>
+        {contribution.split('\n').filter(Boolean).map(line => (
+          <li>{line.replace(/^-\s*/, '')}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  <div style="margin-top: 14px;">
+    {techStack.map(tech => (
+      <span class="tag">{tech}</span>
+    ))}
+  </div>
+</div>

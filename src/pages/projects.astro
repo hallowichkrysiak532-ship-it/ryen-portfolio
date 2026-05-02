@@ -1,82 +1,58 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Projects | Ryen Wu</title>
-  </head>
+<BaseLayout title="Projects">
+  <h1>Projects</h1>
 
-  <body>
-    <main class="container">
-      <a href="/">← Back Home</a>
+  <ProjectCard
+    title="Autonomous Robot Navigation and Target Recognition"
+    description="In a college-level robotics competition, the task was to achieve autonomous navigation and target recognition without predefined goal points. The team adopted a 'the more distance, the more bonus' strategy — the robot prioritized the farthest reachable point after determining its initial position, then switched to YOLOv5-based visual navigation when approaching the target area."
+    contribution="- Designed task-switching logic between long-distance exploration and close-range target recognition
+- Participated in navigation strategy design
+- Built the YOLOv5-based visual recognition pipeline
+- Assisted in building the autonomous navigation and target recognition system"
+    techStack={['YOLOv5', 'OpenCV', 'ROS', 'Robot Navigation', 'Computer Vision']}
+  />
 
-      <h1>Projects</h1>
+  <ProjectCard
+    title="Outdoor Smart Car Vision System"
+    description="Developed for the outdoor smart car competition (bicycle category), this project used YOLOv3-tiny to detect obstacles, speed bumps, and other critical track information, feeding detection results into the vehicle's motion control decisions."
+    contribution="- Used YOLOv3-tiny for obstacle and speed bump detection
+- Deployed real-time vision detection model on embedded hardware
+- Optimized inference pipeline to achieve ~30 FPS on a 4-core i5 board
+- Participated in integrating vision recognition results with motion control logic"
+    techStack={['YOLOv3-tiny', 'OpenCV', 'Embedded Vision', 'Real-time Inference', 'Linux']}
+  />
 
-      <section class="project">
-        <h2>Physics-informed Neural Network for Leaf Trait Inversion</h2>
-        <p>
-          This project investigates how physical radiative transfer models such as
-          PROSPECT-PRO can be combined with neural encoders for robust leaf trait
-          inversion.
-        </p>
+  <ProjectCard
+    title="TEB Local Planner Optimization for Mecanum Wheel Robots"
+    description="The original TEB algorithm is better suited for differential-drive robots. This project modified its motion constraints and goal-point handling logic to better accommodate the omnidirectional motion characteristics of Mecanum wheel robots."
+    contribution="- Analyzed constraints of the original TEB local planner for differential-drive models
+- Modified motion constraints to suit Mecanum wheel robots
+- Adjusted the pose alignment logic when the robot enters the goal area
+- Changed the approach from adjusting pose while moving to first completing pose alignment within a circular goal zone, then re-planning the path"
+    techStack={['ROS', 'TEB Local Planner', 'Mecanum Wheel Robot', 'Navigation', 'Local Path Planning']}
+  />
 
-        <ul>
-          <li>Keywords: PROSPECT-PRO, PI-NN, VAE, Attention, Leaf Spectra</li>
-          <li>Traits: Cab, Car, Cw, Prot, CBC</li>
-          <li>Data: Reflectance / Transmittance spectra</li>
-        </ul>
-      </section>
+  <ProjectCard
+    title="ORB-SLAM2 Deployment on Android"
+    description="This project attempted to deploy ORB-SLAM2 on an Android phone for visual mapping and localization experiments on mobile devices. The focus was on mobile camera input, ORB feature extraction, runtime environment setup, and the feasibility of SLAM algorithms on resource-constrained devices."
+    contribution="- Attempted to configure ORB-SLAM2 runtime dependencies on Android
+- Analyzed data adaptation between mobile camera input and the SLAM frontend
+- Studied ORB feature extraction, pose estimation, and map construction pipelines
+- Explored feasibility of deploying SLAM algorithms on mobile devices"
+    techStack={['ORB-SLAM2', 'Android', 'Visual SLAM', 'Camera Calibration', 'Feature Extraction']}
+  />
 
-      <section class="project">
-        <h2>YOLOv8 OBB / Segmentation on RK3588</h2>
-        <p>
-          This project builds an embedded real-time vision pipeline using YOLOv8,
-          RKNN, ROS, and camera streaming on RK3588.
-        </p>
-
-        <ul>
-          <li>Keywords: YOLOv8, RKNN, ROS, RK3588, Segmentation</li>
-          <li>Tasks: Detection, mask extraction, angle estimation, offset publishing</li>
-          <li>Platform: Linux, ROS Noetic, Rockchip NPU</li>
-        </ul>
-      </section>
-    </main>
-  </body>
-</html>
-
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0f172a;
-    color: #e5e7eb;
-  }
-
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 64px 24px;
-  }
-
-  a {
-    color: #38bdf8;
-  }
-
-  h1 {
-    font-size: 48px;
-  }
-
-  .project {
-    background: #1e293b;
-    padding: 28px;
-    border-radius: 20px;
-    margin: 28px 0;
-  }
-
-  p,
-  li {
-    color: #cbd5e1;
-    line-height: 1.7;
-  }
-</style>
+  <ProjectCard
+    title="Robotics and Smart Car Vision Task Design"
+    description="Designed practical tasks in smart car and robot vision for junior students, covering Python fundamentals, OpenCV image processing, YOLO object detection, RKNN quantization deployment, ROS communication, SLAM simulation, and hands-on robotics practice."
+    contribution="- Designed progressive learning tasks in smart car and robot vision
+- Developed exercises in Python, OpenCV, YOLO, ROS, and SLAM
+- Helped beginners understand the full development pipeline from basic programming to complete robotic vision systems
+- Combined theoretical learning with hands-on projects to improve task operability"
+    techStack={['Python', 'OpenCV', 'YOLO', 'RKNN', 'ROS', 'SLAM', 'Robotics Education']}
+  />
+</BaseLayout>

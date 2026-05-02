@@ -1,63 +1,63 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>About | Ryen Wu</title>
-  </head>
+<BaseLayout title="About">
+  <h1>About Me</h1>
 
-  <body>
-    <main class="container">
-      <a href="/">← Back Home</a>
+  <p>
+    I am an automation student at HDU-ITMO, interested in computer vision, robotic perception,
+    embedded systems, and artificial intelligence that interacts with the physical world.
+  </p>
 
-      <h1>About Me</h1>
+  <p>
+    In computer vision, I focus on OpenCV, CNN-based methods, YOLO object detection, and the
+    deployment of vision models on edge devices. In robotics, I am interested in low-level
+    control systems such as STM32 and Arduino, as well as ROS1 / ROS2 communication, navigation,
+    SLAM, and multi-sensor perception.
+  </p>
 
+  <p>
+    My long-term goal is to connect AI algorithms with real-world physical systems and build
+    intelligent robotic systems that can perceive, reason, and act in real environments.
+  </p>
+
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <h3>HDU-ITMO Automation Program</h3>
       <p>
-        I am an engineering student interested in computer vision, embedded AI,
-        robotics, and physics-informed modeling.
+        Joint undergraduate program in Automation between Hangzhou Dianzi University and
+        ITMO University, focusing on control systems, robotics, computer vision, and
+        embedded intelligent systems.
       </p>
+    </div>
+  </section>
 
-      <p>
-        My current research focuses on leaf spectral trait inversion. I explore how
-        PROSPECT-PRO, neural encoders, VAE structures, and attention mechanisms can
-        be combined to estimate plant traits from spectral measurements.
-      </p>
+  <section>
+    <h2>Research Interests</h2>
+    <div class="card">
+      <ul>
+        <li>Computer Vision</li>
+        <li>Embedded AI</li>
+        <li>Robotics</li>
+        <li>Visual SLAM</li>
+        <li>Navigation</li>
+        <li>Physics-informed Modeling</li>
+      </ul>
+    </div>
+  </section>
 
-      <p>
-        I also work on embedded vision systems, including YOLOv8 deployment on RK3588,
-        ROS-based perception pipelines, camera streaming, and real-time object
-        detection.
-      </p>
-    </main>
-  </body>
-</html>
-
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0f172a;
-    color: #e5e7eb;
-  }
-
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 64px 24px;
-  }
-
-  a {
-    color: #38bdf8;
-  }
-
-  h1 {
-    font-size: 48px;
-  }
-
-  p {
-    color: #cbd5e1;
-    line-height: 1.8;
-    font-size: 18px;
-  }
-</style>
+  <section>
+    <h2>Engineering Interests</h2>
+    <div class="card">
+      <ul>
+        <li>STM32 / Arduino</li>
+        <li>ROS1 / ROS2</li>
+        <li>YOLO Deployment</li>
+        <li>RKNN Quantization</li>
+        <li>Real-time Vision Systems</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

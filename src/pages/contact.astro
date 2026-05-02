@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact">
+  <h1>Contact</h1>
+
+  <p>
+    I am open to research discussions, engineering collaboration, and project opportunities
+    related to computer vision, robotics, embedded AI, SLAM, navigation, and physics-informed
+    modeling.
+  </p>
+
+  <p>
+    Feel free to contact me by email.
+  </p>
+
+  <div class="card" style="margin-top: 28px;">
+    <h3>Get in Touch</h3>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="margin-bottom: 10px;">
+        Email: <a href="mailto:ryen_wu20051008@outlook.com">ryen_wu20051008@outlook.com</a>
+      </li>
+      <li style="margin-bottom: 10px;">
+        GitHub: <a href="https://github.com/hallowichkrysiak532-ship-it" target="_blank" rel="noopener">hallowichkrysiak532-ship-it</a>
+      </li>
+      <li>
+        CV: <a href={import.meta.env.BASE_URL + '/cv.pdf'}>Download CV</a>
+      </li>
+    </ul>
+  </div>
+</BaseLayout>

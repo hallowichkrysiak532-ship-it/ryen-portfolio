@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Research">
+  <h1>Research</h1>
+
+  <section>
+    <h2>Research Focus</h2>
+
+    <p>
+      My current research focuses on leaf spectral trait inversion, which aims to estimate
+      leaf biochemical and structural traits from spectral reflectance and transmittance data.
+    </p>
+
+    <p>
+      The research is based on the PROSPECT-PRO radiative transfer model and follows an
+      encoder-decoder framework. The encoder maps spectral sequences to leaf traits, while
+      the decoder reconstructs spectra through either physical models or learnable neural
+      modules. This introduces physical constraints into the learning process and improves
+      model reliability and interpretability.
+    </p>
+
+    <div class="card" style="margin-top: 24px;">
+      <h3>Research Problem</h3>
+      <p style="color: var(--color-text);">
+        How can we estimate leaf biochemical and structural traits from spectral reflectance
+        and transmittance data?
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Method</h3>
+      <p style="color: var(--color-text);">
+        The research combines PROSPECT-PRO radiative transfer modeling with neural
+        encoder-decoder structures. The encoder maps spectra to traits, while the decoder
+        reconstructs spectra through physical or learnable modules.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Explored Architectures</h2>
+
+    <div class="card">
+      <ul>
+        <li>CNN-based spectral encoder</li>
+        <li>Transformer-based spectral encoder</li>
+        <li>VAE encoder</li>
+        <li>Gated residual structure</li>
+        <li>Soft-prior residual structure</li>
+        <li>Pair-relation mechanism</li>
+        <li>Physics-informed decoder</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Target Traits</h2>
+
+    <div class="card" style="padding: 8px 24px;">
+      <table class="traits-table">
+        <thead>
+          <tr>
+            <th>Trait</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Cab</td><td>Chlorophyll content</td></tr>
+          <tr><td>Car</td><td>Carotenoid content</td></tr>
+          <tr><td>Cw</td><td>Equivalent water thickness</td></tr>
+          <tr><td>Prot</td><td>Protein content</td></tr>
+          <tr><td>CBC</td><td>Carbon-based constituents</td></tr>
+          <tr><td>N</td><td>Leaf structure parameter</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</BaseLayout>

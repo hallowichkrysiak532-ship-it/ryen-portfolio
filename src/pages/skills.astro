@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const categories = [
+  {
+    title: 'Programming',
+    skills: ['Python', 'C / C++', 'MATLAB', 'Bash'],
+  },
+  {
+    title: 'Computer Vision',
+    skills: ['OpenCV', 'CNN', 'YOLOv3-tiny', 'YOLOv5', 'YOLOv8', 'Image Processing', 'Object Detection', 'Segmentation'],
+  },
+  {
+    title: 'Robotics',
+    skills: ['ROS1', 'ROS2', 'Navigation', 'SLAM', 'TEB Local Planner', 'Robot Perception', 'Mecanum Wheel Robot'],
+  },
+  {
+    title: 'Embedded Systems',
+    skills: ['STM32', 'Arduino', 'RK3588', 'RKNN', 'Linux', 'Camera Streaming'],
+  },
+  {
+    title: 'Research Tools',
+    skills: ['PROSPECT-PRO', 'Physics-informed Neural Network', 'Transformer', 'VAE', 'Spectral Analysis', 'Jupyter Notebook'],
+  },
+];
+---
+
+<BaseLayout title="Skills">
+  <h1>Skills</h1>
+
+  <div class="skills-grid">
+    {categories.map(cat => (
+      <div class="card">
+        <h3>{cat.title}</h3>
+        <div style="margin-top: 10px;">
+          {cat.skills.map(skill => (
+            <span class="tag">{skill}</span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</BaseLayout>
