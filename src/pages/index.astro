@@ -5,22 +5,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Home">
   <section class="hero">
     <p class="tag-accent">Engineering · Computer Vision · Robotics · Physics-informed Modeling</p>
-    <h1>吴润裕 / Ryen Wu</h1>
-    <p class="intro">
-      Building intelligent systems that connect neural networks with the physical world,
-      from leaf spectral trait inversion to real-time robotic vision and navigation.
-    </p>
-    <p class="intro" style="font-size: 17px; margin-top: 12px;">
-      5+ Robotics / Vision Projects
-      30 FPS Embedded YOLO Deployment
-      PROSPECT-PRO / PI-NN Research
-      ROS / SLAM / RKNN Experience
-    </p>
-    <div class="btn-group">
-      <a href={import.meta.env.BASE_URL + '/projects'} class="btn">View Projects</a>
-      <a href={import.meta.env.BASE_URL + '/research'} class="btn">Research</a>
-      <a href={import.meta.env.BASE_URL + '/cv.pdf'} class="btn">Download CV</a>
-      <a href={import.meta.env.BASE_URL + '/contact'} class="btn">Contact Me</a>
+    <div class="hero-body">
+      <img
+        class="hero-photo"
+        src={import.meta.env.BASE_URL + 'wry.jpg'}
+        alt="Ryen Wu"
+        width="180"
+        height="180"
+      />
+      <div class="hero-text">
+        <h1>吴润裕 / Ryen Wu</h1>
+        <p class="intro">
+          Building intelligent systems that connect neural networks with the physical world,
+          from leaf spectral trait inversion to real-time robotic vision and navigation.
+        </p>
+        <p class="intro" style="font-size: 17px; margin-top: 12px; white-space: pre-line;">
+          5+ Robotics / Vision Projects
+          30 FPS Embedded YOLO Deployment
+          PROSPECT-PRO / PI-NN Research
+          ROS / SLAM / RKNN Experience
+        </p>
+        <div class="btn-group">
+          <a href={import.meta.env.BASE_URL + '/projects'} class="btn">View Projects</a>
+          <a href={import.meta.env.BASE_URL + '/research'} class="btn">Research</a>
+          <a href={import.meta.env.BASE_URL + '/cv.pdf'} class="btn">Download CV</a>
+          <a href={import.meta.env.BASE_URL + '/contact'} class="btn">Contact Me</a>
+        </div>
+      </div>
     </div>
   </section>
 
